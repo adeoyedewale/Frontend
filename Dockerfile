@@ -4,7 +4,7 @@ FROM node:lts-alpine
 WORKDIR /usr/src/app
 
 # Copy built frontend application
-#COPY build ./
+COPY build ./
 
 # Copy the package.json and package-lock.json
 COPY package*.json ./
