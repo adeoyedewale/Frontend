@@ -1,4 +1,4 @@
-FROM node:l6
+FROM node:l4
 
 # Set the working directory
 WORKDIR /usr/src/app
