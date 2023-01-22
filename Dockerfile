@@ -1,11 +1,13 @@
-FROM node:14
+FROM node:lts-alpine
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /usr/src/app
+
+# Copy built frontend application
+COPY build ./
 
 # Copy the package.json and package-lock.json
-COPY package.json ./
-COPY package-lock.json ./
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
@@ -14,10 +16,11 @@ RUN npm install
 COPY . .
 
 # Build the application
-RUN npm build
+RUN npm run build
 
 # Expose the port
 EXPOSE 3000
 
 # Start the application
-CMD [ "npm", "start" ]
+#CMD [ "npm", "start" ]
+CMD ["react-scripts" "build/index.js"]
