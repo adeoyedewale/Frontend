@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:l6
 
 # Set the working directory
 WORKDIR /usr/src/app
