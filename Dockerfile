@@ -23,4 +23,4 @@ EXPOSE 3000
 
 # Start the application
 #CMD [ "npm", "start" ]
-CMD ["react-scripts" "build/index.js"]
+CMD ["react-scripts" "build"]
